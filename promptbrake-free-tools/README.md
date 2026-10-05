@@ -1,6 +1,6 @@
 # PromptBrake Free Tools
 
-Prepare AI test inputs and release plans with one skill and four hosted MCP tools.
+Prepare AI test inputs and release plans with one skill and five hosted MCP tools.
 
 ## Install
 
@@ -19,6 +19,7 @@ prompted. Avoid configuring a second copy of the same server.
 - `get_prompt_injection_payloads`: “Get retrieval-based prompt-injection inputs for my own support RAG system.”
 - `map_owasp_llm_risk`: “Map prompt-injection risk to test ideas and review responsibilities.”
 - `plan_adlc_release`: “Help me plan my refund agent release; keep unknown decisions explicit.”
+- `build_agent_tool_tests`: “Check that my agent does not call send_email without approval.”
 - `build_test_pack`: “Build a test pack from my chatbot’s expected and forbidden response text.”
 
 The `promptbrake-free-tools` skill clarifies missing inputs, calls the matching
@@ -30,10 +31,10 @@ There are no commands, agents, hooks, local executable scripts, or dependencies.
 
 Requires a Claude Code version supporting skills and HTTP MCP, plus internet
 access to https://promptbrake.com/free-tools/mcp. No PromptBrake account, API key,
-or environment variables are required for these four preparation tools.
+or environment variables are required for these five preparation tools.
 
 The tools do not scan or execute against your application. Running generated test
-packs requires a configured PromptBrake runner and CI access. Response checks
+response packs requires a configured PromptBrake runner and CI access. Tool-call packs run in free Action v0.2.0 with staging dispatcher capture. Missing or incomplete capture cannot pass; dispatched calls do not prove successful backend effects. Response checks
 compare text, not backend actions. Release scores measure planning completeness,
 not security assurance. Use injection inputs only on authorized systems.
 
